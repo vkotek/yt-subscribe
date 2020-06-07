@@ -4,7 +4,7 @@ from selenium.webdriver import Chrome, ChromeOptions
 ## Get your chromedriver at https://sites.google.com/a/chromium.org/chromedriver/
 
 subs_file = "subscription_manager.xml"
-chrome_version = "83"
+
 chrome_profile = "Profile 1" # Set your profile that you want to use, visit "chrome://version" and check Profile Path
 chrome_user_data_dir = r'C:\Users\kotek\AppData\Local\Google\Chrome\User Data' # check "chrome://version"
 
@@ -20,7 +20,7 @@ options.add_argument(f'--user-data-dir={chrome_user_data_dir}')
 options.add_argument(f'--profile-directory={chrome_profile}')
 
 # Luanch chrome
-chromedriver = f'./chromedriver{chrome_version}.exe'
+chromedriver = f'./chromedriver.exe'
 driver = Chrome(chromedriver, options=options)
 
 # Confirm user is logged in
